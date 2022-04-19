@@ -14,7 +14,7 @@ const Team = () => {
             <div className="flex flex-col w-3/6 justify-center space-y-5 ml-[8%] sm:m-auto sm:px-[5%] sm:w-full sm:space-y-2">
                 <div className="artworks-gallery w-full flex justify-start items-center">
                     <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-800" >
-                        <motion.div initial={{x:-80+'px' }} whileInView={{x:0}}  transition={{delay: .3, type:'spring', stiffness:80}} viewport={{ once: true }}>
+                        <motion.div initial={{x:-40}} whileInView={{x:0}}  transition={{delay: .3, type:'spring', stiffness:80}} viewport={{ once: true }}>
                             <h3>06</h3>
                         </motion.div>
                         <motion.div initial={{y:70+'px',opacity:0 }} whileInView={{ y:0, opacity:1}}  transition={{delay: .1, type:'spring', stiffness:60}} viewport={{ once: true }}>

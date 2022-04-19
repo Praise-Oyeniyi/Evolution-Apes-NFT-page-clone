@@ -43,7 +43,7 @@ const HeroSection = () => {
 
             <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-300">
                 <motion.h3
-                    initial={{x:-80 }} 
+                    initial={{x:-40 }} 
                     whileInView={{x:0}}  
                     transition={{delay: .1, type:'ease'}} 
                     viewport={{ once: true }}
