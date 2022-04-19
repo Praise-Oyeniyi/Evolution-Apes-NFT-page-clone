@@ -20,7 +20,7 @@ const Faq = () => {
                 <div className="flex flex-col w-3/6 justify-center space-y-5 sm:w-full sm:space-y-2">
                     <div className="artworks-gallery w-full flex justify-start items-center">
                         <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-200">
-                            <motion.div initial={{x:-40 }} whileInView={{ x:0}}  transition={{delay: .3, type:'spring', stiffness:80}}>
+                            <motion.div initial={{x:-30 }} whileInView={{ x:0}}  transition={{delay: .3, type:'spring', stiffness:80}}>
                                 <h3>07</h3>
                             </motion.div>
                             

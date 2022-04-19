@@ -9,7 +9,7 @@ const About = () => {
                         <div className="artworks-gallery w-full flex justify-start items-center">
                             <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-300">
                                 <motion.h3
-                                    initial={{x:-40}} 
+                                    initial={{x:-30}} 
                                     whileInView={{x:0}}  
                                     transition={{delay: .3, type:'spring', stiffness:80}} 
                                     viewport={{ once: true }}
