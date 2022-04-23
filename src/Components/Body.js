@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeroSection from './HeroSection';
 import Gallery from './Gallery/Gallery';
 import Collection from './Collection';
@@ -7,10 +7,24 @@ import Team from './Team';
 import Faq from './Faq/Faq';
 import { motion } from 'framer-motion';
 import Whitelist from './Whitelist';
+import { Navbar } from './Navbar';
 
 const Body = () => {
+    const [nav, navActive] = useState(false);
+
+    const navToggle=()=>{
+        nav? navActive(false) : navActive(true); 
+    }
+
   return (
       <div className="body scroll-smooth overflow-x-hidden sm:text-sm">
+            <div
+                onClick={()=>navToggle()} 
+                className="top-5 burger h-auto w-auto p-1 flex flex-col justify-center items-end sm:cursor-pointer z-[500] absolute right-4">
+                    <div className={nav? 'bg-red-600 h-px w-10  mb-[0.4rem]': 'bg-gray-100 h-px w-10  mb-[0.4rem]'}></div>
+                    <div className={nav? "bg-red-600 h-px w-8": "bg-gray-100 h-px w-8"}></div>
+            </div>
+            <Navbar nav={nav} navToggle={navToggle}/>
             <HeroSection/>
             <motion.div 
                 initial={{y:'-100vh',opacity:0}} animate={{y:0, opacity:1}} transition={{duration:.5}}

@@ -74,7 +74,7 @@ function Collection(){
                     </motion.div>
                 </div>
                 <motion.p 
-                    className='w-full text-base lg:hidden'
+                    className='w-full text-sm lg:hidden'
                     initial={{y:150+'px',opacity:0 }} whileInView={{ y:0, opacity:1}}  
                     transition={{delay: .5, type:'spring', stiffness:60}} viewport={{ once: true }}>
 
