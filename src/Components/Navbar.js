@@ -30,7 +30,7 @@ export const Navbar = ({nav, navToggle}) => {
   return (
     <motion.div onClick={()=>navToggle()}
         variants={variants} initial={'initial'} whileInView={'animate'} 
-        className={nav? 'w-screen h-screen bg-gray-600 bg-opacity-50 fixed top-0 z-[50] right-0 ease-in' : 'ease-out w-screen h-screen bg-gray-600 bg-opacity-50 fixed top-0 z-[50] right-[-100vw]'}>
+        className={nav? 'w-screen h-screen bg-gray-600 bg-opacity-50 fixed top-0 z-[50] right-0 ease-in lg:hidden' : 'ease-out lg:hidden w-screen h-screen bg-gray-600 bg-opacity-50 fixed top-0 z-[50] right-[-100vw]'}>
         <motion.div 
             variants={conVariants}
             className="h-full w-4/6 bg-gray-200 ml-auto -mt-6 py-10 px-8">

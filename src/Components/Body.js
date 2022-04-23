@@ -20,7 +20,7 @@ const Body = () => {
       <div className="body scroll-smooth overflow-x-hidden sm:text-sm">
             <div
                 onClick={()=>navToggle()} 
-                className="top-5 burger h-auto w-auto p-1 flex flex-col justify-center items-end sm:cursor-pointer z-[500] absolute right-4">
+                className="lg:hidden top-5 burger h-auto w-auto p-1 flex flex-col justify-center items-end sm:cursor-pointer z-[500] absolute right-4">
                     <div className={nav? 'bg-red-600 h-px w-10  mb-[0.4rem]': 'bg-gray-100 h-px w-10  mb-[0.4rem]'}></div>
                     <div className={nav? "bg-red-600 h-px w-8": "bg-gray-100 h-px w-8"}></div>
             </div>
