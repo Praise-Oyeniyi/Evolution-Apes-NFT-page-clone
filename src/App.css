@@ -10,6 +10,9 @@
   transform: scale(1.05);
   transition: .2s ease-in ;
 }
+.nav-bg{
+  transition: .5s ease;
+}
 .active{
   transition: .3s ease;
   color:#ef4444;
@@ -47,8 +50,13 @@
 .gallery-wrapper-inner::-webkit-scrollbar {
   display: none;
 }
-@media (max-width:500px){
+@media (max-width:699px){
   .wrapper-about{
     background-image:none;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .wrapper-about{
+    background-size: 60% 80%;
   }
 }

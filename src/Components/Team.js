@@ -10,8 +10,8 @@ const Team = () => {
     const team = useRef(null);
 
   return (
-    <div className="h-auto w-full py-28 space-y-10 sm:py-20" id='team'>
-            <div className="flex flex-col w-3/6 justify-center space-y-5 ml-[8%] sm:m-auto sm:px-[5%] sm:w-full sm:space-y-2">
+    <div className="h-auto w-full py-28 space-y-10 sm:py-20" id='team tab:py-16'>
+            <div className="flex flex-col w-3/6 justify-center space-y-5 ml-[8%] sm:m-auto sm:px-[5%] sm:w-full sm:space-y-2 tab:space-y-2 tab:w-5/6 med:w-4/6">
                 <div className="artworks-gallery w-full flex justify-start items-center">
                     <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-800" >
                         <motion.div initial={{x:-30}} whileInView={{x:0}}  transition={{delay: .3, type:'spring', stiffness:80}} viewport={{ once: true }}>
@@ -26,10 +26,10 @@ const Team = () => {
                     </div>
                 </div>
                 <motion.div initial={{y:150+'px',opacity:0 }} whileInView={{ y:0, opacity:1}}  transition={{delay: .3, type:'spring', stiffness:60}} viewport={{ once: true }}>
-                    <h1 className='text-5xl font-bold sm:text-2xl sm:font-semibold sm:pb-3'>
+                    <h1 className='text-5xl font-bold sm:text-2xl sm:font-semibold sm:pb-3 tab:text-4xl med:w-5/6'>
                         EVOLUTION APES CREW
                     </h1>
-                    <h4 className='w-4/6 text-base sm:w-full' >
+                    <h4 className='w-4/6 text-base sm:w-full tab:w-full med:w-full' >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ratione possimus modi tempore odio accusamus, amet est cumque repudiandae quasi.
                     </h4>
                 </motion.div>

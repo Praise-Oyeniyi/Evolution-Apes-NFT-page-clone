@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 
 const Gallery = () => {
   return (
-    <div className="artworks-gallery-wrapper h-auto w-full bg-white py-18 py-28 sm:py-14">
+    <div className="artworks-gallery-wrapper h-auto w-full bg-white py-18 py-28 sm:py-14 tab:py-14">
         <div className="h-full w-full flex space-y-10 flex-col" id='collection'>
-            <div className="flex flex-col w-3/6 justify-center space-y-5 ml-[8%] sm:w-full sm:space-y-2 sm:m-auto sm:px-[5%]">
+            <div className="flex flex-col w-4/6 justify-center space-y-5 ml-[8%] sm:w-full sm:space-y-2 med:space-y-3 tab:space-y-2 sm:m-auto sm:px-[5%] tab:w-5/6">
                 <div className="artworks-gallery w-full flex justify-start items-center">
                     <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-800" >
                         <motion.div initial={{x:-30 }} whileInView={{x:0}}  transition={{delay: .3, type:'spring', stiffness:80}} viewport={{ once: true }}>
@@ -22,12 +22,12 @@ const Gallery = () => {
                     </div>
                 </div>
                 <motion.div initial={{y:150+'px',opacity:0 }} whileInView={{ y:0, opacity:1}}  transition={{delay: .2, type:'spring', stiffness:60}} viewport={{ once: true }}>
-                    <h1 className='text-5xl font-bold sm:text-2xl sm:font-semibold'>
+                    <h1 className='text-5xl font-bold sm:text-2xl sm:font-semibold tab:text-4xl'>
                         NOTICEABLE COLLECTIONS
                     </h1>
                 </motion.div>
                 <motion.div initial={{y:150+'px', opacity:0}} whileInView={{ y:0, opacity:1}}  transition={{delay: .5, type:'spring', stiffness:60}} viewport={{ once: true }}>
-                    <h4 className='w-4/6 text-base sm:w-full sm:text-sm'>
+                    <h4 className='w-4/6 text-base sm:w-full sm:text-sm tab:text-base med:w-full'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi repellat, modi distinctio blanditiis nam mollitia animi illum at omnis.
                     </h4>
                 </motion.div>

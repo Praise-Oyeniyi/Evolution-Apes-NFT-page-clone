@@ -35,11 +35,11 @@ const cardContainer ={
 const HeroSection = () => {
   return (
     <div 
-        className='flex justify-between relative before:absolute before:w-full before:h-full before:bg-gray-900 before:opacity-90 before:-z-10 before:top-0 hero-bg-wrapper bg-gray-800 bg-[url("Images/hero-bg.jpg")] h-[90vh] sm:h-[27em] text-white w-full z-30'>
+        className='flex justify-between relative before:absolute before:w-full before:h-full before:bg-gray-900 before:opacity-90 before:-z-10 before:top-0 hero-bg-wrapper bg-gray-800 bg-[url("Images/hero-bg.jpg")] h-[90vh] tab:h-[70vh] sm:h-[27em] text-white w-full z-30'>
        
         <motion.div 
             variants={container} initial={'initial'} animate={'animate'}
-            className="hero-bg-text flex flex-col w-3/6 justify-center space-y-5 ml-[8%] h-full sm:w-full">
+            className="hero-bg-text flex flex-col w-3/6 justify-center space-y-5 ml-[8%] h-full sm:w-full tab:w-4/6 med:space-y-3">
 
             <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-300">
                 <motion.h3
@@ -57,26 +57,26 @@ const HeroSection = () => {
                 >EVOLUTION APES
                 </motion.h2>
             </div>
-            <h1 className='text-6xl font-bold tracking-wider w-5/6 sm:text-4xl'>
+            <h1 className='text-6xl font-bold tracking-wider w-5/6 sm:text-4xl tab:text-4xl med:text-5xl'>
                 FINDING YOUR APESSS...
             </h1>
-            <h4 className='w-5/6 sm:text-sm'>
+            <h4 className='w-5/6 sm:text-sm tab:text-base med:text-base'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero beatae earum exercitationem repellat, similique sed autem optio accusamus amet...
             </h4>
             <motion.button 
-                className='py-2 px-4 bg-gray-100 text-gray-800 w-2/6 hover:bg-red-500 hover:text-gray-100 ease-in sm:w-3/6'>
+                className='py-2 px-4 bg-gray-100 text-gray-800 w-2/6 med:w-4/6 hover:bg-red-500 hover:text-gray-100 ease-in sm:w-3/6 tab:w-3/6'>
                 VIEW ON OPENSEA
             </motion.button>
         </motion.div>
         
         <div 
-            className="hero-card-wrapper w-auto rotate-6 self-center mr-24 text-gray-300 bg-[#cccaca25] p-5 rounded-lg relative sm:hidden"
+            className="tab:hidden hero-card-wrapper w-auto med:h-80 rotate-6 self-center mr-24 med:mr-10 text-gray-300 bg-[#cccaca25] p-5 rounded-lg relative sm:hidden"
             >
             <motion.div 
                 variants={cardContainer} initial={'initial'} animate={'animate'}
-                className="card w-full space-y-4 text-xs">
+                className="card w-full space-y-4 text-xs med:space-y-2">
                 <div className="card-top flex justify-between items-center">
-                    <div className="images h-8 flex cursor-pointer">
+                    <div className="images h-8 flex cursor-pointer med:h-5">
                         <img src={Image2} alt="" className='rounded-[50%] relative'/>
                         <img src={Image3} alt="" className='rounded-[50%] relative -left-3'/>
                         <img src={Image4} alt="" className='rounded-[50%] relative -left-6'/>
@@ -89,7 +89,7 @@ const HeroSection = () => {
                         <div className="w-1 h-1 bg-white rounded"></div>
                     </div>
                 </div>
-                <img src={Image1} alt="hero-card-img" className='rounded-lg relative h-[23em] opacity-6'/>
+                <img src={Image1} alt="hero-card-img" className='rounded-lg relative h-[23em] opacity-6 med:h-56'/>
                 <div>
                     <div className="market-info flex justify-between w-full items-center cursor-pointer">
                         <div className="bid">

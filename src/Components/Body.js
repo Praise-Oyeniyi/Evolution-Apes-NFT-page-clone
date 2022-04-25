@@ -17,10 +17,10 @@ const Body = () => {
     }
 
   return (
-      <div className="body scroll-smooth overflow-x-hidden sm:text-sm">
+      <div className="body scroll-smooth overflow-x-hidden sm:text-sm tab:text-base">
             <div
                 onClick={()=>navToggle()} 
-                className="lg:hidden top-5 burger h-auto w-auto p-1 flex flex-col justify-center items-end sm:cursor-pointer z-[500] absolute right-4">
+                className="hidden tab:flex sm:flex top-5 burger h-auto w-auto p-1 flex-col justify-center items-end sm:cursor-pointer z-[500] fixed right-4">
                     <div className={nav? 'bg-red-600 h-px w-10  mb-[0.4rem]': 'bg-gray-100 h-px w-10  mb-[0.4rem]'}></div>
                     <div className={nav? "bg-red-600 h-px w-8": "bg-gray-100 h-px w-8"}></div>
             </div>
@@ -49,13 +49,13 @@ const Body = () => {
                             initial={{y:150+'px', opacity:0}} 
                             whileInView={{ y:0, opacity:1}}  
                             transition={{delay: .5, type:'spring', stiffness:60}} 
-                             className='justify-items-center  justify-between flex flex-auto font-semibold ease-in w-4/6 sm:flex-wrap sm:items-center sm:font-medium  sm:w-full sm:justify-around sm:text-center'>
+                             className='justify-items-center  justify-between flex flex-auto font-semibold ease-in w-4/6 tab:w-5/6 tab:text-base sm:space-x-2 sm:justify-center sm:text-sm'>
 
-                            <li className='hover:text-[#a7b3e9d8] delay-100 ease sm:w-[45%] sm:pb-4 sm:text-right'><a href="#collection">COLLECTION</a></li>
-                            <li className='hover:text-[#a7b3e9d8] delay-100 ease sm:w-[45%] sm:pb-4 sm:text-left'><a href="#about">ABOUT</a></li>
-                            <li className='hover:text-[#a7b3e9d8] delay-100 ease sm:w-full sm:pb-4'><a href="#whitelist">WHITELIST</a></li>
-                            <li className='hover:text-[#a7b3e9d8] delay-100 ease sm:w-full  sm:pb-4'><a href="#team">TEAM</a></li>
-                            <li className='hover:text-[#a7b3e9d8] delay-100 ease sm:w-full sm:pb-4'><a href="#faq">FAQ</a></li>
+                            <li className='hover:text-[#a7b3e9d8] delay-100 ease'><a href="#collection">COLLECTION</a></li>
+                            <li className='hover:text-[#a7b3e9d8] delay-100 ease'><a href="#about">ABOUT</a></li>
+                            <li className='hover:text-[#a7b3e9d8] delay-100 ease '><a href="#whitelist">WHITELIST</a></li>
+                            <li className='hover:text-[#a7b3e9d8] delay-100 ease '><a href="#team">TEAM</a></li>
+                            <li className='hover:text-[#a7b3e9d8] delay-100 ease'><a href="#faq">FAQ</a></li>
                         </motion.ul>
 
                         <div className="foot-nav-icons flex justify-between w-5/6 sm:3/6 sm:justify-center space-x-2 align-baseline">
