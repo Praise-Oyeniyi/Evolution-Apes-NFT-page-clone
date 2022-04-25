@@ -7,7 +7,7 @@ const Gallery = () => {
   return (
     <div className="artworks-gallery-wrapper h-auto w-full bg-white py-18 py-28 sm:py-14 tab:py-14">
         <div className="h-full w-full flex space-y-10 flex-col" id='collection'>
-            <div className="flex flex-col w-4/6 justify-center space-y-5 ml-[8%] sm:w-full sm:space-y-2 med:space-y-3 tab:space-y-2 sm:m-auto sm:px-[5%] tab:w-5/6">
+            <div className="flex flex-col w-4/6 justify-center space-y-5 ml-[8%] sm:w-full sm:space-y-2 med:space-y-3 tab:space-y-2 sm:m-auto sm:px-[5%] tab:w-5/6 med:px-[1%] med:ml-[5%]">
                 <div className="artworks-gallery w-full flex justify-start items-center">
                     <div className="hero-bg-text-top flex items-center text-base font-light space-x-3 text-gray-800" >
                         <motion.div initial={{x:-30 }} whileInView={{x:0}}  transition={{delay: .3, type:'spring', stiffness:80}} viewport={{ once: true }}>
