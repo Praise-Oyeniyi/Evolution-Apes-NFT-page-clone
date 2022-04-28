@@ -1,17 +1,43 @@
-import React from 'react'
+import { useState, useRef, useLayoutEffect} from 'react'
 import DomImg1 from '../Images/001.jpg'
 import DomImg2 from '../Images/002.jpg'
 import DomImg3 from '../Images/003.jpg'
-import {
-    useViewportScroll,
-    motion,
-    useTransform,
-  } from 'framer-motion';
+import { motion, useViewportScroll, useTransform, useSpring } from 'framer-motion'
+
 
 function Collection(){
-    const { scrollY } = useViewportScroll();
-    const y1 = useTransform(scrollY, [0, 300], [0, 0]);
-    const y2 = useTransform(scrollY, [0, 300], [0, 0]);
+    const offset = -120;
+    const [elementTop, setElementTop] = useState(0)
+    const [clientHeight, setClientHeight] = useState(0)
+    const ref = useRef(null)
+    const { scrollY } = useViewportScroll()
+    
+
+    // start animating our element when we've scrolled it into view
+    const initial = elementTop - clientHeight
+    // end our animation when we've scrolled the offset specified
+    const final = elementTop + offset
+
+
+    // const yRange = useTransform(scrollY, [initial, final], [offset, -offset])
+    const y = useSpring(useTransform(scrollY, [initial, final], [offset, -offset]), { stiffness: 400, damping: 90 })
+    const ym = useSpring(useTransform(scrollY, [initial, final], [-offset, offset]), { stiffness: 400, damping: 90 })
+
+    useLayoutEffect(() => {
+        const element = ref.current
+        // save our layout measurements in a function in order to trigger
+        // it both on mount and on resize
+        const onResize = () => {
+        // use getBoundingClientRect instead of offsetTop in order to
+        // get the offset relative to the viewport
+        setElementTop(element.getBoundingClientRect().top + window.scrollY || window.pageYOffset)
+        setClientHeight(window.innerHeight)
+        }
+        onResize()
+        window.addEventListener('resize', onResize)
+        return () => window.removeEventListener('resize', onResize)
+    }, [ref])
+
 
 
   return (
@@ -61,15 +87,13 @@ function Collection(){
     
             <div className="zig-img-wrapper w-[45%] mr-[8%] h-100 sm:h-auto sm:w-full tab:h-auto tab:w-[90%] tab:order-1 sm:order-1 tab:m-auto sm:m-auto sm:block tab:block tab:space-y-8 sm:space-y-8 sm:px-[5%]" >
                 <div className="zig-zag h-full w-full flex space-x-3 justify-around items-center">
-                    <motion.div style={{ y: y1}} className=" h-[32em] w-2/6 sm:h-60 tab:h-96 sm:self-center">
+                    <motion.div ref={ref} style={window.innerWidth < 700? '':{y}} className=" h-[32em] w-2/6 sm:h-60 tab:h-96 sm:self-center">
                         <img src={DomImg1} alt="" className='h-full w-full'/>
                     </motion.div>
-                    <motion.div style={{ y: y2}}  className="h-[32em] w-2/6 sm:h-60 tab:h-96 sm:self-end sm:mt-7 tab:mt-7" >
-                        {/* self-end */}
+                    <motion.div  style={window.innerWidth < 700? '':{y:ym}}  className="h-[32em] w-2/6 sm:h-60 tab:h-96 sm:self-end sm:mt-7 tab:mt-7" >
                         <img src={DomImg2} alt="" className='h-full w-full'/>
                     </motion.div>
-                    <motion.div style={{y:y1}} className="h-[32em] w-2/6 sm:h-60 tab:h-96 sm:self-center">
-                    {/* self-start */}
+                    <motion.div ref={ref} style={window.innerWidth < 700? '':{y}} className="h-[32em] w-2/6 sm:h-60 tab:h-96 sm:self-center">
                         <img src={DomImg3} alt="" className='h-full w-full'/>
                     </motion.div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { animate, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Scrollspy from 'react-scrollspy'
 
 export const Navbar = ({nav, navToggle}) => {

@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
   scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
 }
 .footer-icon svg:hover{
   fill: #f0545493;
