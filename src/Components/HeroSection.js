@@ -35,7 +35,7 @@ const cardContainer ={
 const HeroSection = () => {
   return (
     <div 
-        className='flex justify-between relative before:absolute before:w-full before:h-full before:bg-gray-900 before:opacity-90 before:-z-10 before:top-0 hero-bg-wrapper bg-gray-800 bg-[url("Images/hero-bg.jpg")] h-[90vh] tab:h-[70vh] sm:h-[27em] text-white w-full z-30'>
+        className='flex justify-between relative before:absolute before:w-full before:h-full before:bg-gray-900 before:opacity-90 before:-z-10 before:top-0 hero-bg-wrapper bg-gray-800 bg-[url("Images/hero-bg.jpg")] h-[90vh] tab:h-[70vh] sm:h-[32em] text-white w-full z-30'>
        
         <motion.div 
             variants={container} initial={'initial'} animate={'animate'}
